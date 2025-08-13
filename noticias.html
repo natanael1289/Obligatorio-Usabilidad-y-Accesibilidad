@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noticias y Lanzamientos – Level Up Accesible</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Navegación principal">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">🎮 Level Up</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="noticias.html">Noticias</a></li>
+            <li class="nav-item"><a class="nav-link" href="consolas.html">Consolas</a></li>
+            <li class="nav-item"><a class="nav-link" href="comunidad.html">Comunidad</a></li>
+            <li class="nav-item"><a class="nav-link" href="foro.html">Foro</a></li>
+            <li class="nav-item"><a class="nav-link" href="accesibilidad.html">Accesibilidad</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container my-5">
+    <h1 class="mb-4 text-center">📰 Noticias y Lanzamientos Accesibles</h1>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Tarjeta 1 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img
+            src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2023/12/slay-princess-3253167.jpg?tf=640x"
+            class="card-img-top" alt="Slay The Princess" />
+          <div class="card-body">
+            <h5 class="card-title">Slay the Princess - The Pristine Cut</h5>
+            <p class="card-text">
+              La versión definitiva de una de las grandes sorpresas de Steam en 2023, ahora disponible en PS5, Nintendo
+              Switch, PS4 y Xbox Series X|S y One.
+            </p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPrin">Ver más</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="https://image.api.playstation.com/vulcan/img/rnd/202010/2618/w48z6bzefZPrRcJHc7L8SO66.png"
+            class="card-img-top" alt="Portada de The Last of Us Part 2" />
+          <div class="card-body">
+            <h5 class="card-title">The Last of Us Part II</h5>
+            <p class="card-text">
+              Líder en accesibilidad con múltiples ajustes para visual, auditiva y motriz.
+            </p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalLast">Ver más</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img
+            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2322010/capsule_616x353.jpg?t=1750909504"
+            class="card-img-top" alt="Portada de God of War Ragnarok" />
+          <div class="card-body">
+            <h5 class="card-title">God of War Ragnarok</h5>
+            <p class="card-text">
+              Opciones para subtítulos, daltonismo, controles remapeables y ayudas visuales.
+            </p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRagn">Ver más</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3 con tooltip -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="img/juego3.jpg" class="card-img-top" alt="Nuevo control adaptativo para consolas" />
+          <div class="card-body">
+            <h5 class="card-title">Control adaptativo 2.0</h5>
+            <p class="card-text">
+              Incluye nuevas configuraciones táctiles y de voz.
+              <span class="text-primary" data-bs-toggle="tooltip" title="Perfecto para movilidad reducida.">ℹ️</span>
+            </p>
+            <a href="consolas.html" class="btn btn-outline-secondary">Ir a Consolas</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- MODALES -->
+  <div class="modal fade" id="modalPrin" tabindex="-1" aria-labelledby="modalPrinLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalPrinLabel">Detalles de Slay the Princess - The Pristine Cut</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          Localización de textos a múltiples idiomas, incluido el español.<br>
+          Control con solo dos teclas.<br>
+          Posibilidad de tomarse todo el tiempo necesario para tomar decisiones.<br>
+          Consulta de todos los diálogos en cualquier momento.<br>
+          Lector de pantalla integrado.<br>
+          Descripción de todas las escenas.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalLast" tabindex="-1" aria-labelledby="modalLastLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLastLabel">Detalles de The Last of Us II</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          Controles totalmente personalizables.<br>
+          Modo para daltonismo y ayudas visuales avanzadas.<br>
+          Audio 3D y pistas auditivas para personas con discapacidad auditiva.<br>
+          Modos de juego adaptados para facilitar la jugabilidad.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalRagn" tabindex="-1" aria-labelledby="modalRagnLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalRagnLabel">Detalles de God of War Ragnarok</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          Subtítulos detallados y configurables.<br>
+          Opciones para ajustar la dificultad y ayudas visuales.<br>
+          Soporte para control por voz y remapeo completo..
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">© 2025 Level Up Accesible – Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Activar tooltips -->
+  <script>
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+}
+
+/* Estilos para toda la página */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212; /* fondo oscuro */
+  color: #f0f0f0; /* texto claro para contraste */
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1a1a1a !important; /* fondo más oscuro y sólido */
+  border-bottom: 3px solid #00bfff; /* borde azul para destacar */
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #00bfff !important;
+}
+
+.nav-link {
+  color: #d1d1d1 !important;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active {
+  color: #00bfff !important;
+  outline: none;
+  text-decoration: underline;
+}
+
+/* Botón de menú (hamburguesa) */
+.navbar-toggler {
+  border-color: #00bfff !important;
+}
+
+.navbar-toggler-icon {
+  filter: invert(100%); /* icono blanco para fondo oscuro */
+}
+
+/* Fondo y texto de sección principal */
+section.bg-dark {
+  background-color: #121212 !important; /* fondo oscuro sólido */
+  background-blend-mode: multiply;
+}
+
+section.bg-dark .container {
+  background-color: rgba(0, 0, 0, 0.7); /* semitransparente para mejor lectura */
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+/* Botones */
+.btn-primary {
+  background-color: #00bfff;
+  border-color: #00bfff;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #008fcf;
+  border-color: #008fcf;
+  outline: none;
+}
+
+/* Tarjetas (cards) */
+.card {
+  border-radius: 0.5rem;
+  box-shadow: -40px 40px 20px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.card:hover
+.card:focus-within {
+  box-shadow: 0 0 10px 3px #00bfff;
+  outline: none;
+}
+
+/* Texto dentro de las cards */
+.card-title {
+  color: #007acc;
+  font-weight: 700;
+}
+
+.card-text {
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background-color: #1a1a1a;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Accesibilidad: foco visible */
+a:focus,
+button:focus,
+input:focus {
+  outline: 3px solid #00bfff;
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+/* Añadimos estos estilos para el formulario, integrando tu estilo */
+
+.foro-form-container {
+  background: #1a1a1a; /* fondo oscuro igual que navbar */
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px 3px #00bfff; /* resaltamos con azul */
+  color: #f0f0f0;
+}
+
+.foro-title {
+  font-weight: 700;
+  color: #00bfff;
+  margin-bottom: 2rem;
+}
+
+.foro-form label {
+  font-weight: 600;
+  color: #d1d1d1;
+}
+
+.foro-form .form-control,
+.foro-form .form-select,
+.foro-form textarea {
+  background-color: #121212;
+  color: #f0f0f0;
+  border: 1px solid #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.foro-form .form-control:focus,
+.foro-form .form-select:focus,
+.foro-form textarea:focus {
+  border-color: #00bfff;
+  box-shadow: 0 0 8px rgba(0, 191, 255, 0.7);
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.foro-form .invalid-feedback {
+  color: #ff6b6b; /* rojo para errores */
+}
+
+.foro-form .btn-primary {
+  background-color: #00bfff;
+  border-color: #00bfff;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.foro-form .btn-primary:hover,
+.foro-form .btn-primary:focus {
+  background-color: #008fcf;
+  border-color: #008fcf;
+  outline: none;
+}
+
+#formResult.alert-success {
+  background-color: #004a99;
+  color: #cce6ff;
+  border: 1px solid #00bfff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* Para radio buttons y checkbox */
+.foro-form .form-check-label {
+  color: #d1d1d1;
+}
+
+.foro-form fieldset {
+  border: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.console-img {
+  height: 100px;
+  width: 100px;
+}
