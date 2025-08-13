@@ -1,21 +1,18 @@
-/* Reset básico */
 * {
   box-sizing: border-box;
 }
 
-/* Estilos para toda la página */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #121212; /* fondo oscuro */
-  color: #f0f0f0; /* texto claro para contraste */
+  background-color: #121212;
+  color: #f0f0f0;
   margin: 0;
   padding: 0;
 }
 
-/* Navbar */
 .navbar {
-  background-color: #1a1a1a !important; /* fondo más oscuro y sólido */
-  border-bottom: 3px solid #00bfff; /* borde azul para destacar */
+  background-color: #1a1a1a !important; 
+  border-bottom: 3px solid #00bfff;
 }
 
 .navbar-brand {
@@ -38,28 +35,25 @@ body {
   text-decoration: underline;
 }
 
-/* Botón de menú (hamburguesa) */
 .navbar-toggler {
   border-color: #00bfff !important;
 }
 
 .navbar-toggler-icon {
-  filter: invert(100%); /* icono blanco para fondo oscuro */
+  filter: invert(100%);
 }
 
-/* Fondo y texto de sección principal */
 section.bg-dark {
-  background-color: #121212 !important; /* fondo oscuro sólido */
+  background-color: #121212 !important;
   background-blend-mode: multiply;
 }
 
 section.bg-dark .container {
-  background-color: rgba(0, 0, 0, 0.7); /* semitransparente para mejor lectura */
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 2rem;
   border-radius: 0.5rem;
 }
 
-/* Botones */
 .btn-primary {
   background-color: #00bfff;
   border-color: #00bfff;
@@ -74,7 +68,6 @@ section.bg-dark .container {
   outline: none;
 }
 
-/* Tarjetas (cards) */
 .card {
   border-radius: 0.5rem;
   box-shadow: -40px 40px 20px;
@@ -89,7 +82,6 @@ section.bg-dark .container {
   outline: none;
 }
 
-/* Texto dentro de las cards */
 .card-title {
   color: #007acc;
   font-weight: 700;
@@ -99,14 +91,12 @@ section.bg-dark .container {
   color: #333;
 }
 
-/* Footer */
 footer {
   background-color: #1a1a1a;
   color: #888;
   font-size: 0.9rem;
 }
 
-/* Accesibilidad: foco visible */
 a:focus,
 button:focus,
 input:focus {
@@ -115,13 +105,12 @@ input:focus {
   box-shadow: none;
 }
 
-/* Añadimos estos estilos para el formulario, integrando tu estilo */
 
 .foro-form-container {
-  background: #1a1a1a; /* fondo oscuro igual que navbar */
+  background: #1a1a1a;
   padding: 2rem;
   border-radius: 0.5rem;
-  box-shadow: 0 0 10px 3px #00bfff; /* resaltamos con azul */
+  box-shadow: 0 0 10px 3px #00bfff;
   color: #f0f0f0;
 }
 
@@ -155,7 +144,7 @@ input:focus {
 }
 
 .foro-form .invalid-feedback {
-  color: #ff6b6b; /* rojo para errores */
+  color: #ff6b6b;
 }
 
 .foro-form .btn-primary {
@@ -181,7 +170,6 @@ input:focus {
   margin-top: 1rem;
 }
 
-/* Para radio buttons y checkbox */
 .foro-form .form-check-label {
   color: #d1d1d1;
 }
