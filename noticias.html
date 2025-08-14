@@ -86,17 +86,49 @@
 
       <div class="col">
         <div class="card h-100 shadow-sm">
-          <img src="img/juego3.jpg" class="card-img-top" alt="Nuevo control adaptativo para consolas" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQogg0E2TvDr-uh8-fEBFQWZcDxosIKaAtxJA&s"
+            class="card-img-top" alt="The Vale: Shadow of the Crown" />
           <div class="card-body">
-            <h5 class="card-title">Control adaptativo 2.0</h5>
+            <h5 class="card-title">The Vale: Shadow of the Crown</h5>
             <p class="card-text">
-              Incluye nuevas configuraciones táctiles y de voz.
-              <span class="text-primary" data-bs-toggle="tooltip" title="Perfecto para movilidad reducida.">ℹ️</span>
+              Un juego de rol auditivo pensado para personas con ceguera o baja visión. Explora un mundo solo con
+              sonido.
             </p>
-            <a href="consolas.html" class="btn btn-outline-secondary">Ir a Consolas</a>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalVale">Ver más</button>
           </div>
         </div>
       </div>
+
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZMgVYZQv7bMSqPAS1i9IUfHzVcqydEWuCnw&s"
+            class="card-img-top" alt="Celeste" />
+          <div class="card-body">
+            <h5 class="card-title">Celeste</h5>
+            <p class="card-text">
+              Juego de plataformas con historia emocional y modo de asistencia para adaptar la dificultad.
+            </p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCel">Ver más</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtXra1zquQ-_1T_lJciwXBcjI8L_BYFbag0g&s"
+            class="card-img-top" alt="A Blind Legend" />
+          <div class="card-body">
+            <h5 class="card-title">A Blind Legend</h5>
+            <p class="card-text">
+              Aventura de acción sonora. Se juega completamente sin pantalla, ideal para personas ciegas.
+            </p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBlind">Ver más</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
     </div>
   </main>
 
@@ -152,18 +184,87 @@
     </div>
   </div>
 
+  <div class="modal fade" id="modalVale" tabindex="-1" aria-labelledby="modalValeLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalPrinLabel">Detalles de The Vale: Shadow of the Crown</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          The Vale: Shadow of the Crown es una aventura de acción narrada completamente a través de audio 3D. El jugador
+          encarna a una joven princesa ciega, desplazada de su reino, que debe sobrevivir y luchar.
+
+          Características de accesibilidad:
+
+          Totalmente jugable sin necesidad de pantalla.
+
+          Navegación y combate guiados por sonido envolvente.
+
+          Compatible con lectores de pantalla.
+
+          Controles simplificados.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalCel" tabindex="-1" aria-labelledby="modalCelLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalPrinLabel">Detalles de Celeste</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          Celeste es un desafiante juego de plataformas sobre escalar una montaña, con un fuerte mensaje sobre la salud
+          mental.
+
+          Accesibilidad:
+
+          “Modo de asistencia” que permite ajustar la velocidad del juego, la dificultad, el salto y activar
+          invencibilidad.
+
+          Ideal para jugadores con discapacidades motoras o cognitivas.
+
+          Compatible con mando y teclado.
+
+          Mensaje: Explora temas como ansiedad y autosuperación.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalBlind" tabindex="-1" aria-labelledby="modalBlindLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLastLabel">Detalles A Blind Legend</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          A Blind Legend es un juego auditivo donde interpretas a un caballero ciego guiado por su hija en un mundo
+          lleno de peligros.
+
+          Accesibilidad:
+
+          Todo el gameplay se basa en audio 3D.
+
+          Interfaz sin imágenes, perfecta para personas con ceguera.
+
+          Controles táctiles (móvil) o con teclado (PC).
+
+          Disponible gratis en móviles y PC.
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer class="bg-dark text-white text-center py-3 mt-5">
     <p class="mb-0">© 2025 Level Up Accesible – Todos los derechos reservados</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
-  <script>
-    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-  </script>
 </body>
 
 </html>
