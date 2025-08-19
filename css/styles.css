@@ -109,79 +109,88 @@ input:focus {
 }
 
 
+
 .foro-form-container {
-  background: #1a1a1a;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 0 10px 3px #00bfff;
-  color: #f0f0f0;
-}
+      background: #1a1a1a;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px 3px #00bfff;
+      color: #f0f0f0;
+    }
 
-.foro-title {
-  font-weight: 700;
-  color: #00bfff;
-  margin-bottom: 2rem;
-}
+    .foro-form input[type="date"] {
+      -webkit-appearance: auto;
+      -moz-appearance: auto;
+      appearance: auto;
+      background-color: #121212;
+      color: #f0f0f0;
+      border: 1px solid #333;
+      padding: 0.375rem 0.75rem;
+      border-radius: 0.25rem;
+    }
 
-.foro-form label {
-  font-weight: 600;
-  color: #d1d1d1;
-}
+    .foro-title {
+      font-weight: 700;
+      color: #00bfff;
+      margin-bottom: 2rem;
+    }
 
-.foro-form .form-control,
-.foro-form .form-select,
-.foro-form textarea {
-  background-color: #121212;
-  color: #f0f0f0;
-  border: 1px solid #333;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
+    .foro-form label {
+      font-weight: 600;
+      color: #d1d1d1;
+    }
 
-.foro-form .form-control:focus,
-.foro-form .form-select:focus,
-.foro-form textarea:focus {
-  border-color: #00bfff;
-  box-shadow: 0 0 8px rgba(0, 191, 255, 0.7);
-  background-color: #121212;
-  color: #f0f0f0;
-}
+    .foro-form .form-control,
+    .foro-form .form-select,
+    .foro-form textarea {
+      background-color: #121212;
+      color: #f0f0f0;
+      border: 1px solid #333;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.foro-form .invalid-feedback {
-  color: #ff6b6b;
-}
+    .foro-form .form-control:focus,
+    .foro-form .form-select:focus,
+    .foro-form textarea:focus {
+      border-color: #00bfff;
+      box-shadow: 0 0 8px rgba(0, 191, 255, 0.7);
+      background-color: #121212;
+      color: #f0f0f0;
+    }
 
-.foro-form .btn-primary {
-  background-color: #00bfff;
-  border-color: #00bfff;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
+    .foro-form .btn-primary {
+      background-color: #00bfff;
+      border-color: #00bfff;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
 
-.foro-form .btn-primary:hover,
-.foro-form .btn-primary:focus {
-  background-color: #008fcf;
-  border-color: #008fcf;
-  outline: none;
-}
+    .foro-form .btn-primary:hover,
+    .foro-form .btn-primary:focus {
+      background-color: #008fcf;
+      border-color: #008fcf;
+      outline: none;
+    }
 
-#formResult.alert-success {
-  background-color: #004a99;
-  color: #cce6ff;
-  border: 1px solid #00bfff;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  margin-top: 1rem;
-}
+    .foro-form fieldset {
+      border: none;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
 
-.foro-form .form-check-label {
-  color: #d1d1d1;
-}
+    .comment-box {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      color: #f0f0f0;
+    }
 
-.foro-form fieldset {
-  border: none;
-  padding: 0;
-  margin-bottom: 1rem;
-}
+    .comment-box h5 {
+      color: #00bfff;
+      margin-bottom: 0.5rem;
+    }
 
 .console-img {
   height: 100px;
