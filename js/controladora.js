@@ -1,8 +1,6 @@
-// Referencias
 const weatherContainer = document.getElementById("weather");
 const refreshBtn = document.getElementById("refreshWeather");
 
-// Clima actual
 const getWeatherData = async () => {
   const API_KEY = "e9d44e217be76a3c78194add9eba0de3";
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=-34.31667&lon=-57.35&units=metric&lang=es&appid=${API_KEY}`;
@@ -23,7 +21,6 @@ const getWeatherData = async () => {
   }
 };
 
-// Pronóstico 5 días (resumido)
 const getWeatherForecast = async () => {
   const API_KEY = "e9d44e217be76a3c78194add9eba0de3";
   const url = `https://api.openweathermap.org/data/2.5/forecast?lat=-33.2825&lon=-57.6036&units=metric&lang=es&appid=${API_KEY}`;
@@ -33,30 +30,27 @@ const getWeatherForecast = async () => {
     if (!response.ok) throw new Error("Error en la solicitud del pronóstico");
     const data = await response.json();
 
-    // Agrupar por día
     const dias = {};
     data.list.forEach(item => {
       const fecha = new Date(item.dt * 1000);
-      const diaKey = fecha.toISOString().split('T')[0]; // YYYY-MM-DD
+      const diaKey = fecha.toISOString().split('T')[0];
       if (!dias[diaKey]) dias[diaKey] = [];
       dias[diaKey].push(item);
     });
 
-    // Crear pronóstico diario usando pronóstico de mediodía si existe
-    const keys = Object.keys(dias).slice(0, 6); // tomamos hoy + próximos 5 días
+    const keys = Object.keys(dias).slice(0, 6);
     const pronostico = keys.map(key => {
       const dayData = dias[key];
       let medioDia = dayData.find(d => new Date(d.dt * 1000).getHours() === 12);
-      if (!medioDia) medioDia = dayData[Math.floor(dayData.length / 2)]; // fallback
+      if (!medioDia) medioDia = dayData[Math.floor(dayData.length / 2)];
       const temp_max = Math.max(...dayData.map(d => d.main.temp_max));
       const temp_min = Math.min(...dayData.map(d => d.main.temp_min));
       const descripcion = medioDia.weather[0].description;
-      const icono = medioDia.weather[0].icon.replace('n','d'); // siempre de día
+      const icono = medioDia.weather[0].icon.replace('n','d');
       const fecha = new Date(medioDia.dt * 1000);
       return { fecha, temp_max, temp_min, descripcion, icono };
     });
 
-    // Omitir el primer día (ya mostrado en clima actual)
     return pronostico.slice(1, 6);
 
   } catch (error) {
@@ -65,7 +59,6 @@ const getWeatherForecast = async () => {
   }
 };
 
-// Render clima actual
 const renderWeatherCard = (clima) => {
   weatherContainer.innerHTML = `
     <div class="card bg-dark text-light p-3 mx-auto shadow-none" style="max-width: 400px;" tabindex="0" 
@@ -83,7 +76,6 @@ const renderWeatherCard = (clima) => {
   `;
 };
 
-// Render pronóstico
 const renderForecast = (pronostico) => {
   const cards = pronostico.map(dia => `
     <div class="card bg-dark text-light p-2 m-1 shadow-none" style="width: 120px;" tabindex="0" 
@@ -102,11 +94,9 @@ const renderForecast = (pronostico) => {
   `;
 };
 
-// Función principal
 const cargarClima = async () => {
   weatherContainer.innerHTML = `<p class="text-center">Cargando clima...</p>`;
 
-  // Clima actual
   try {
     const clima = await getWeatherData();
     renderWeatherCard(clima);
@@ -119,7 +109,6 @@ const cargarClima = async () => {
     return;
   }
 
-  // Pronóstico
   const pronosticoContainer = document.createElement("div");
   pronosticoContainer.className = "text-center mt-3";
   pronosticoContainer.innerHTML = `<p>Cargando pronóstico...</p>`;
@@ -127,13 +116,12 @@ const cargarClima = async () => {
 
   try {
     const pronostico = await getWeatherForecast();
-    pronosticoContainer.innerHTML = ""; // limpio mensaje
+    pronosticoContainer.innerHTML = "";
     renderForecast(pronostico);
   } catch {
     pronosticoContainer.innerHTML = `<p>No se pudo cargar el pronóstico.</p>`;
   }
 };
 
-// Carga inicial y botón
 cargarClima();
 refreshBtn.addEventListener("click", cargarClima);
