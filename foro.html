@@ -167,6 +167,14 @@
 
       form.reset();
     });
+
+    document.addEventListener("DOMContentLoaded", () => {
+    let fechaInput = document.getElementById("fecha");
+    if (fechaInput) {
+      let hoy = new Date().toISOString().split("T")[0];
+      fechaInput.value = hoy;
+    }
+  });
   </script>
 </body>
 </html>

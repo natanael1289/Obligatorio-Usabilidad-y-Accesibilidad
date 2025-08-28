@@ -85,6 +85,14 @@ section.bg-dark .container {
   outline: none;
 }
 
+.row .col a:focus .card {
+  outline: 3px solid #0d6efd;
+  outline-offset: 4px;
+  transform: scale(1.05);
+  transition: transform 0.2s ease, outline 0.2s ease;
+  box-shadow: 0 0 15px rgba(13, 110, 253, 0.6);
+}
+
 .card-title {
   color: #007acc;
   font-weight: 700;
